@@ -1,0 +1,227 @@
+/* 1. Zerando os espaçamentos padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Estilo do fundo da página */
+body {
+    background-color: #f5f0e6; /* Um tom off-white quente, que lembra areia bem clarinha */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center; /* Centraliza o nosso container no meio da tela */
+}
+
+/* 3. A nossa faixa central */
+.container {
+    width: 60%; /* Ocupa exatamente 60% da tela */
+    background-color: #020617; /* Um azul da meia-noite extremamente escuro, quase preto */
+    min-height: 100vh; /* Faz a faixa ir do topo até o fim da tela no mínimo */
+    padding: 40px; /* Dá um respiro interno para os textos não colarem na borda */
+}
+
+/* 4. Estilo do Cabeçalho (Perfil) */
+.perfil {
+    text-align: center; /* Centraliza a foto e os textos horizontalmente */
+    margin-bottom: 40px; /* Cria um espaço entre o cabeçalho e a seção de texto abaixo */
+}
+
+/* 5. Estilo da Foto */
+.perfil img {
+    width: 160px; /* Largura da foto */
+    height: 160px; /* Altura da foto (igual à largura para ficar um quadrado perfeito) */
+    border-radius: 50%; /* Transforma o quadrado em um círculo perfeito */
+    object-fit: cover; /* Garante que a foto preencha o círculo sem ficar esticada ou achatada */
+    border: 3px solid #dcdcdc; /* Uma borda sutil ao redor da foto para dar acabamento */
+    margin-bottom: 15px; /* Espaço entre a foto e o nome */
+}
+
+/* 6. Estilo do Nome */
+.perfil h1 {
+    color: #f1f5f9; /* Um cinza quase branco, que "acende" no fundo escuro */
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+/* 7. Estilo do CRP */
+.perfil h2 {
+    color: #94a3b8; /* Um cinza azulado médio, perfeito para informações secundárias */
+    font-size: 16px;
+    font-weight: normal; /* Tira o negrito padrão da tag h2, deixando mais delicado */
+}
+
+/* 8. Estilo das Seções de Texto */
+.secao-texto {
+    margin-top: 30px; /* Distância do topo */
+    margin-bottom: 40px; /* Cria um espaço bem nítido entre uma seção e a próxima */
+    padding: 0 20px; 
+}
+
+/* 9. Estilo dos Títulos das seções */
+.secao-texto h3 {
+    color: #f1f5f9; /* Mesma cor do nome para manter o padrão dos títulos */ 
+    font-size: 22px;
+    margin-bottom: 15px; 
+}
+
+/* 10. Estilo dos Textos (Parágrafos) */
+.secao-texto p {
+    color: #cbd5e1; /* Um cinza claro suave, que não cansa a vista durante a leitura do texto longo */ 
+    font-size: 16px;
+    line-height: 1.7; 
+    text-align: justify; 
+    margin-bottom: 15px; 
+}
+
+/* 11. Área dos Botões */
+.area-botao {
+    margin-top: 50px; 
+    margin-bottom: 30px; 
+    display: flex; /* Transforma a área em uma caixa flexível */
+    flex-direction: column; /* Coloca os itens em coluna (um embaixo do outro) */
+    align-items: center; /* Centraliza os botões no meio da tela */
+    gap: 15px; /* Cria um espaço perfeito de 15px entre os botões */
+}
+
+/* 12. Estilo do Botão de WhatsApp */
+.botao-whatsapp {
+    background-color: #25D366; /* Verde oficial do WhatsApp */
+    color: #ffffff; /* Letra branca */
+    text-decoration: none; /* Tira aquele sublinhado padrão dos links */
+    padding: 15px 30px; /* Altura e largura internas do botão */
+    border-radius: 8px; /* Cantos levemente arredondados */
+    font-size: 18px;
+    font-weight: bold; /* Deixa a letra mais grossa */
+    display: inline-block; /* Permite que o CSS respeite as medidas de padding e margem no link */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Cria uma sombrinha leve atrás do botão */
+    transition: background-color 0.3s, transform 0.2s; /* Prepara o botão para uma animação suave */
+}
+
+/* 12.5. Estilo do Botão do Instagram */
+.botao-instagram {
+    /* Cria aquele efeito de mistura de cores (gradiente) clássico do Instagram */
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: #ffffff; 
+    text-decoration: none; 
+    padding: 15px 30px; 
+    border-radius: 8px; 
+    font-size: 18px;
+    font-weight: bold; 
+    display: inline-block; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s; 
+}
+
+.botao-instagram:hover {
+    transform: translateY(-3px); /* Faz o botão "pular" quando passa o mouse */
+}
+
+/* 13. Efeito Interativo (Quando passa o mouse por cima) */
+.botao-whatsapp:hover {
+    background-color: #1ebe57; /* Um verde ligeiramente mais escuro */
+    transform: translateY(-3px); /* Faz o botão "subir" 3 pixels, dando ideia de clique */
+}
+
+/* 14. Responsividade (Versão Mobile) */
+@media (max-width: 768px) {
+    /* Tudo que está aqui dentro só funciona se a tela for menor que 768px (celulares e tablets pequenos) */
+    
+    .container {
+        width: 95%; /* No celular, 60% fica muito espremido. Então mandamos a faixa ocupar quase a tela toda */
+        padding: 20px 15px; /* Diminuímos o espaço interno para aproveitar melhor a telinha */
+    }
+
+    .perfil img {
+        width: 130px; /* Reduzimos um pouco a foto para ficar mais proporcional */
+        height: 130px;
+    }
+
+    .perfil h1 {
+        font-size: 24px; /* Reduzimos levemente o tamanho do nome */
+    }
+
+    .secao-texto p {
+        text-align: left; /* No celular, texto justificado pode criar buracos estranhos, alinhar à esquerda facilita a leitura na tela estreita */
+    }
+
+    .botao-whatsapp, .botao-instagram {
+        width: 100%; /* Faz ambos os botões esticarem na tela do celular */
+        padding: 15px 10px;
+        text-align: center; /* Garante que o texto fique no meio */
+    }
+
+    /* Ajuste do botão do menu para o celular */
+    .botao-menu {
+        color: #f1f5f9 !important; /* Muda a cor dos 3 tracinhos para claro, para aparecer no fundo escuro */
+        top: 15px; /* Alinha com o espaçamento superior da faixa central no mobile */
+        left: 15px; /* Alinha com o espaçamento lateral da faixa central no mobile */
+    }
+}
+
+/* 15. Botão Menu Hambúrguer */
+.botao-menu {
+    position: fixed; /* Fixa o botão na tela, ele não rola com a página */
+    top: 20px;
+    left: 20px;
+    font-size: 30px; /* Tamanho dos tracinhos */
+    background: none;
+    border: none;
+    color: #020617; /* Cor escura para aparecer no fundo areia */
+    cursor: pointer; /* Muda a setinha do mouse para a mãozinha de clique */
+    z-index: 1000; /* Garante que o botão fique por cima de tudo */
+}
+
+/* 16. Barra Lateral (Sidebar) */
+.barra-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Largura da barra */
+    height: 100vh; /* Ocupa 100% da altura da tela */
+    background-color: #020617; /* Mesmo azul noturno da faixa central */
+    padding-top: 60px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5); /* Sombra para destacar do fundo */
+    z-index: 1001; /* Fica por cima do botão hambúrguer quando aberta */
+    
+    /* O truque da animação: */
+    transform: translateX(-100%); /* Empurra a barra 100% para a esquerda (escondendo ela fora da tela) */
+    transition: transform 0.3s ease-in-out; /* Faz o movimento de deslizar ser suave */
+}
+
+/* Classe que o JavaScript vai adicionar para abrir a barra */
+.barra-lateral.aberta {
+    transform: translateX(0); /* Traz a barra de volta para a posição inicial (0) */
+}
+
+/* 17. Botão de Fechar e Lista do Menu */
+.botao-fechar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 36px;
+    color: #f1f5f9; /* Cinza clarinho */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-lista {
+    list-style: none; /* Tira as bolinhas padrão da lista (ul) */
+    padding: 0;
+}
+
+.menu-lista li {
+    padding: 15px 30px;
+}
+
+.menu-lista li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.2s;
+}
+
+.menu-lista li a:hover {
+    color: #f09433; /* Fica laranjinha (cor do gradiente do insta) ao passar o mouse */
+}
